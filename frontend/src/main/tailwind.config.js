@@ -1,0 +1,1 @@
+B:/IntelliJ/sowacustoms/frontend/tailwind.config.js

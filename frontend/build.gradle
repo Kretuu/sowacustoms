@@ -1,0 +1,24 @@
+plugins {
+	id 'org.siouan.frontend-jdk11'
+}
+
+frontend {
+	nodeVersion = '18.13.0'
+	assembleScript = 'run build'
+	cleanScript = 'run clean'
+	checkScript = 'run check'
+}
+
+tasks.register('buildFrontendResources', Copy) {
+	// Directory containing the artifacts in the frontend project
+	def frontendBuildDir = file("${project(':frontend').buildDir}")
+	// Directory where the frontend artifacts must be copied to be packaged alltogether with the backend by the 'war'
+	// plugin.
+	def frontendResourcesDir = file("public")
+
+	group 'Frontend'
+	description 'Build frontend public files'
+
+	from frontendResourcesDir
+	into frontendBuildDir
+}

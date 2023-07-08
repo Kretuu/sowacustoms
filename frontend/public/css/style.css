@@ -1,0 +1,91 @@
+/* author: Jakub Kreczetowski */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Segoe UI", sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+
+h1 {
+    text-align: left;
+    margin: 0;
+}
+
+#main_top_image {
+    width: 100%;
+    margin-top: 80px;
+}
+
+img {
+    width:100%;
+}
+
+
+#off-canvas {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-right: -250px;
+    height: 100%;
+    width: 250px;
+    background-color: #303030;
+    transition: all 0.5s ease;
+}
+
+
+
+@media all and (max-width: 800px) {
+    #make-booking {
+        display: none;
+    }
+
+    /*#wrapper > header > nav {*/
+    /*    display: none;*/
+    /*}*/
+
+    #logo.active {
+        margin-left: 250px;
+        transition: all 0.5s ease;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        height: 5vh;
+        margin: 0;
+    }
+
+    #wrapper.active {
+        margin-left: -250px;
+        transition: all 0.5s ease;
+    }
+
+    #off-canvas.active {
+        display: block;
+        margin: 0;
+        transition: all 0.5s ease;
+    }
+
+    #menu-button {
+        display: block;
+        position: fixed;
+        right: 0;
+        padding: 10px 20px;
+    }
+
+}

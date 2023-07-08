@@ -1,0 +1,16 @@
+subprojects {
+    apply plugin: 'java'
+    compileJava {options.encoding = "UTF-8"}
+
+    group = 'pl.sowacustoms'
+    version = '1.0'
+
+    targetCompatibility = '17'
+
+//    jar {
+//        from {
+//            configurations.implementation.collect { it.isDirectory() ? it : zipTree(it) }
+//        }
+//    }
+
+}
